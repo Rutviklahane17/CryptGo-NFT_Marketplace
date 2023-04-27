@@ -8,7 +8,7 @@ import {mintNFT} from '../Blockchain.services'
 const auth =
   'Basic ' +
   Buffer.from(
-    '2NKUwBvMq5ZihlTxvDXuhmmk1Wr' + ':' + '6f9272d50cb07b56b588d04234b39827',
+    process.env.REACT_APP_INFURIA_PID + ':' + process.env.REACT_APP_INFURIA_API,
   ).toString('base64')
 
 const client = create({
