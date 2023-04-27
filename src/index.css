@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-bg-header {
+  background-color: #d7e8b7;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsl(300, 81%, 51%) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsl(299, 68%, 74%) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(215, 137, 237) 0, transparent 50%);
+}
+
+
+
+
+.gradient-bg-hero {
+  background-color: #a1afc0;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsl(322, 80%, 59%) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsl(0, 26%, 41%) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-artworks {
+  background-color: #b9d1ee;
+  background-image: radial-gradient(
+      at 50% 50%,
+      hsl(300, 21%, 84%) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 0%, rgb(202, 211, 233) 0, transparent 50%),
+    radial-gradient(at 50% 50%, rgb(194, 205, 221) 0, transparent 50%);
+}
+
+.gradient-bg-footer {
+  background-color: #a1afc0;
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsl(335, 61%, 63%) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+
+.text-gradient-n {
+  background: -webkit-linear-gradient(#140101, #150102);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient {
+  background: -webkit-linear-gradient(#070000, #0b0500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 0.7s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glow-on-hover {
+  width: 200px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  
+  background: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+ 
+}
+
+.glow-on-hover:active {
+  color: #111
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111f;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
+
+.underline-onhover:hover {
+  text-decoration: underline;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
